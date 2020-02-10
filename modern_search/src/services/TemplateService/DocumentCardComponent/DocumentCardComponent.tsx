@@ -5,7 +5,7 @@ import {
     DocumentCardPreview,
     DocumentCardTitle,
     IDocumentCardPreviewProps,
-    DocumentCardLocation,
+    DocumentCardActions,
     DocumentCardType
   } from 'office-ui-fabric-react/lib/DocumentCard';
 import { ImageFit } from 'office-ui-fabric-react/lib/Image';
@@ -103,27 +103,43 @@ export class DocumentCardComponent extends React.Component<IDocumentCardComponen
         
         return <div style={{ marginBottom: '0.5rem'}} ref={(documentCardPreviewRefThis) => (this.documentCardPreviewRef = documentCardPreviewRefThis)}>
                     <DocumentCard 
-                        onClick={() => {
+                        onClick={(ev) => {
+                            console.log (ev);
+                            ev.preventDefault();
+                            ev.stopPropagation();
                             this.setState({
-                            showCallout: true
+                                showCallout: true
                             });
                         }}
-                        type={ this.props.isCompact ? DocumentCardType.compact : DocumentCardType.normal }
-                        
+                        type={ this.props.isCompact ? DocumentCardType.compact : DocumentCardType.normal }    
                     >
                         <DocumentCardPreview {...previewProps} />
-                        <Link href={processedProps.href} target='_blank'>
-                            <DocumentCardTitle
-                                title={processedProps.title}
-                                shouldTruncate={false}                
-                            />                         
-                        </Link>
+                        <DocumentCardTitle
+                            title={processedProps.title}
+                            shouldTruncate={false}
+                        />                                  
                         { processedProps.author ?
                             <DocumentCardActivity
                                 activity={processedProps.date}
                                 people={[{ name: processedProps.author, profileImageSrc: processedProps.profileImage}]}
                             /> : null 
                         }
+                        <DocumentCardActions
+                            actions={
+                                [
+                                    {
+                                        iconProps: { iconName: 'Share' },
+                                        onClick: (ev: any) => {
+                                            var redirectWindow = window.open(processedProps.href, '_blank');
+                                            redirectWindow.location;
+                                            ev.preventDefault();
+                                            ev.stopPropagation();
+                                        },
+                                        ariaLabel: 'share action'
+                                    }
+                                ]
+                            }
+                        />
                     </DocumentCard>
                     {renderPreviewCallout}
                 </div>;

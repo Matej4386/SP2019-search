@@ -1,6 +1,6 @@
 {
   "name": "search",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "main": "lib/index.js",
   "engines": {
@@ -35,7 +35,7 @@
     "downshift": "3.1.5",
     "flickity": "^2.2.1",
     "flickity-imagesloaded": "^2.0.0",
-    "handlebars": "4.1.2",
+    "handlebars": "^4.3.0",
     "handlebars-helpers": "0.8.4",
     "immutability-helper": "2.4.0",
     "jquery": "^3.4.1",

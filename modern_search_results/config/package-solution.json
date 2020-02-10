@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "modern-search-results",
+    "id": "3a8d7029-5c71-407f-bc27-b502d068798b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "features": [
+      {
+        "title": "Code renderer for React Search Refiners",
+        "description": "MySearch renderer",
+        "id": "f270b189-c81d-4ad9-b628-6528e298ce1a",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/modern-search-results.sppkg"
+  }
+}

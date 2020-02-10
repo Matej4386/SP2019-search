@@ -223,7 +223,7 @@ export default class SearchResultsContainer extends React.Component<ISearchResul
                     {renderRefiners}
                     <div className={styles.searchWp__buttonBar}>{sortPanel}</div>
                     {renderOverlay}
-                    
+                    <div id={this.state.mountingNodeId} />
                     {renderSearchResultTemplate}
                     {renderPagination}
                 </div>;

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "my-search-render-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/mySearchRender/MySearchRenderApplicationCustomizer.js",
+          "manifest": "./src/extensions/mySearchRender/MySearchRenderApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "MySearchRenderApplicationCustomizerStrings": "lib/extensions/mySearchRender/loc/{locale}.js"
+  }
+}
