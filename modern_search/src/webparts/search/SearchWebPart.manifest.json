@@ -32,6 +32,7 @@
         "showResultsCount": true,
         "webPartTitle": "",
         "enableLocalization": true,
+        "showSearchBox": true,
         "useDefaultSearchQuery": false,
         "resultTypes": [],
         "useExternalRefinersDisplay": false,
