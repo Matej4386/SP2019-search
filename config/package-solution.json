@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "my-search",
+    "id": "e7573825-af46-441b-b963-44522dd2f08d",
+    "version": "2.0.0.6",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/my-search.sppkg"
+  }
+}

@@ -1,0 +1,10 @@
+.searchRefiners {
+    
+    // Needed to avoid overlay overflow
+    position: relative;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    &__noFilter {
+        padding:10px 0;
+    }
+}

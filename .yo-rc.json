@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "onprem19",
+    "version": "1.10.0",
+    "libraryName": "nbs-search",
+    "libraryId": "e7573825-af46-441b-b963-44522dd2f08d",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
