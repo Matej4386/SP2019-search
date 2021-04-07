@@ -64,6 +64,7 @@ import { SearchHelper } from '../../helpers/SearchHelper';
 import IUserService from '../../services/UserService/IUserService';
 import { UserService } from '../../services/UserService/UserService';
 import PnPTelemetry from "@pnp/telemetry-js";
+import { UrlHelper } from '../../../lib/helpers/UrlHelper';
 
 export default class NbsSearchWebPart extends BaseClientSideWebPart<INbsSearchWebPartProps> {
   private _userService: IUserService;
@@ -194,7 +195,12 @@ export default class NbsSearchWebPart extends BaseClientSideWebPart<INbsSearchWe
     let queryDataSourceValue = this.properties.queryKeywords;
 
     let queryKeywords = queryDataSourceValue ? queryDataSourceValue : this.properties.defaultSearchQuery;
-
+    
+    const searchK: string = UrlHelper.getQueryStringParam('k', null);
+    if (searchK) {
+        queryKeywords = searchK;
+    }
+    
     // Get data from connected sources
     if (this.properties.useRefiners) {
         if (this._isDirty) {
