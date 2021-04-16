@@ -198,7 +198,7 @@ export default class NbsSearchWebPart extends BaseClientSideWebPart<INbsSearchWe
     
     const searchK: string = UrlHelper.getQueryStringParam('k', null);
     if (searchK) {
-        queryKeywords = searchK;
+        queryKeywords = decodeURIComponent(searchK);
     }
     
     // Get data from connected sources
