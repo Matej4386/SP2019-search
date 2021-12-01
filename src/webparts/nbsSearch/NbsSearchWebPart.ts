@@ -291,7 +291,8 @@ export default class NbsSearchWebPart extends BaseClientSideWebPart<INbsSearchWe
 
     if (isValueConnected && !this.properties.useDefaultSearchQuery ||
         isValueConnected && this.properties.useDefaultSearchQuery && this.properties.defaultSearchQuery ||
-        !isValueConnected && !isEmpty(queryKeywords)) {
+        !isValueConnected && !isEmpty(queryKeywords) || 
+        this.properties.useSearchBox) {
         renderElement = this._searchContainer;
     } else {
         if (this.displayMode === DisplayMode.Edit) {
