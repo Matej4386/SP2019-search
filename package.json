@@ -74,6 +74,6 @@
     "css-modules-typescript-loader": "4.0.0",
     "del": "5.1.0",
     "fork-ts-checker-webpack-plugin": "4.1.0",
-    "ajv": "~5.2.2"
+    "ajv": "~6.12.3"
   }
 }
