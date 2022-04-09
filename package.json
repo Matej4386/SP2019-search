@@ -34,7 +34,7 @@
     "handlebars-helpers": "0.8.4",
     "immutability-helper": "~2.4.0",
     "jquery": "^3.4.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "office-ui-fabric-react": "^5.135.5",
     "react": "15.6.2",
     "react-ace": "5.8.0",
